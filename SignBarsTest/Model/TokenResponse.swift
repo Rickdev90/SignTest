@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+public struct TokenResponse: Codable {
+    let success: Bool?
+    let token: String?
+}
+
+public struct UserPass: Codable {
+    var email: String?
+    var pass: String?
+}

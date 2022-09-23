@@ -13,6 +13,10 @@
 		1DBB57C228DD08010062E4B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DBB57C028DD08010062E4B5 /* Main.storyboard */; };
 		1DBB57C428DD08030062E4B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DBB57C328DD08030062E4B5 /* Assets.xcassets */; };
 		1DBB57C728DD08030062E4B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DBB57C528DD08030062E4B5 /* LaunchScreen.storyboard */; };
+		1DBB57D328DD10180062E4B5 /* TokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBB57D228DD10180062E4B5 /* TokenResponse.swift */; };
+		1DBB57D528DD107A0062E4B5 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBB57D428DD107A0062E4B5 /* Manager.swift */; };
+		1DBB57D728DDFD320062E4B5 /* CodeBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBB57D628DDFD320062E4B5 /* CodeBarViewController.swift */; };
+		1DBB57DA28DDFFAC0062E4B5 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBB57D928DDFFAC0062E4B5 /* ViewControllerExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		1DBB57C328DD08030062E4B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1DBB57C628DD08030062E4B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1DBB57C828DD08030062E4B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1DBB57D228DD10180062E4B5 /* TokenResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenResponse.swift; sourceTree = "<group>"; };
+		1DBB57D428DD107A0062E4B5 /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
+		1DBB57D628DDFD320062E4B5 /* CodeBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeBarViewController.swift; sourceTree = "<group>"; };
+		1DBB57D928DDFFAC0062E4B5 /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +68,9 @@
 				1DBB57D028DD09750062E4B5 /* View */,
 				1DBB57CF28DD09690062E4B5 /* Model */,
 				1DBB57CE28DD09620062E4B5 /* Controller */,
+				1DBB57D828DDFF800062E4B5 /* Extensions */,
 				1DBB57BA28DD08010062E4B5 /* AppDelegate.swift */,
 				1DBB57BC28DD08010062E4B5 /* SceneDelegate.swift */,
-				1DBB57BE28DD08010062E4B5 /* ViewController.swift */,
 				1DBB57C328DD08030062E4B5 /* Assets.xcassets */,
 				1DBB57C528DD08030062E4B5 /* LaunchScreen.storyboard */,
 				1DBB57C828DD08030062E4B5 /* Info.plist */,
@@ -73,6 +81,8 @@
 		1DBB57CE28DD09620062E4B5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1DBB57BE28DD08010062E4B5 /* ViewController.swift */,
+				1DBB57D628DDFD320062E4B5 /* CodeBarViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -80,6 +90,7 @@
 		1DBB57CF28DD09690062E4B5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1DBB57D228DD10180062E4B5 /* TokenResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -95,8 +106,17 @@
 		1DBB57D128DD097F0062E4B5 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				1DBB57D428DD107A0062E4B5 /* Manager.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1DBB57D828DDFF800062E4B5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1DBB57D928DDFFAC0062E4B5 /* ViewControllerExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,7 +192,11 @@
 			files = (
 				1DBB57BF28DD08010062E4B5 /* ViewController.swift in Sources */,
 				1DBB57BB28DD08010062E4B5 /* AppDelegate.swift in Sources */,
+				1DBB57DA28DDFFAC0062E4B5 /* ViewControllerExtension.swift in Sources */,
+				1DBB57D328DD10180062E4B5 /* TokenResponse.swift in Sources */,
+				1DBB57D728DDFD320062E4B5 /* CodeBarViewController.swift in Sources */,
 				1DBB57BD28DD08010062E4B5 /* SceneDelegate.swift in Sources */,
+				1DBB57D528DD107A0062E4B5 /* Manager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

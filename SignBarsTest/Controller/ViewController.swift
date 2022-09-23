@@ -23,28 +23,25 @@ class ViewController: UIViewController {
     }
     
     private func configureView(){
-        //viewModel.getToken()
-        //showSpinner()
-        //viewModel.sendCredentials()
+       
       
         LogInBtn.addTarget(self, action: #selector(logInAction), for: .touchUpInside)
         
     }
     
     @objc func logInAction() {
-        //showSpinner()
+        showSpinner()
         guard let user = emailTxt.text else {return}
         guard let password = passTxt.text else {return}
         let modelUser = UserPass(email: user, pass: password)
         print(modelUser)
-        //send user ans pass of textfield
         viewModel.sendCredentials(user: modelUser.email ?? "", pass: modelUser.pass ?? "")
         viewModel.refreshData = {[weak self]() in
             DispatchQueue.main.async {
-                //self?.removeSpinner()
+                self?.removeSpinner()
                 print("hola\(self?.viewModel.dataLoginResponse?.success)")
                 if self?.viewModel.dataLoginResponse?.success == true{
-                   // self?.performSegue(withIdentifier: "segueHome", sender: self)
+                    self?.performSegue(withIdentifier: "segueCodeBar", sender: self)
                 }else{
                     
                     //self?.invalidLbl.isHidden = false
