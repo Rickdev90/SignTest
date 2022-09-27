@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         LogInBtn.layer.cornerRadius = 5
         LogInBtn.layer.borderWidth = 1
         LogInBtn.layer.borderColor = UIColor.black.cgColor
-        self.hideKeyboardWhenTappedAround() 
+        self.hideKeyboardWhenTappedAround()
     }
     
     @objc func logInAction() {
@@ -54,7 +54,7 @@ class ViewController: UIViewController {
                     self?.navigationController?.pushViewController(vc!, animated: true)
                     
                 }else{
-                    
+                    self?.alertView()
                 }
             }
         }
@@ -101,6 +101,12 @@ class ViewController: UIViewController {
         return try? JSONSerialization.jsonObject(
             with: payloadData,
             options: []) as? [String: Any]
+    }
+    
+    func alertView(){
+        let alert = UIAlertController(title: "Alert", message: "Email o contraseña incorrecto", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
     
 }
