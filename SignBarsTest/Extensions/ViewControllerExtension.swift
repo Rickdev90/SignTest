@@ -29,7 +29,10 @@ extension UIViewController{
         activityView?.removeFromSuperview()
         activityView = nil
     }
+    
+    
 }
+
 
 
     
