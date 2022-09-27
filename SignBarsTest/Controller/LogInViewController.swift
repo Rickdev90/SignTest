@@ -36,9 +36,10 @@ class LogInViewController: UIViewController {
         showSpinner()
         guard let user = emailTxt.text else {return}
         guard let password = passTxt.text else {return}
-        let modelUser = UserPass(email: user, pass: password)
-        print(modelUser)
-        viewModel.sendCredentials(user: modelUser.email ?? "", pass: modelUser.pass ?? "")
+        //let modelUser = UserPass(email: user, pass: password)
+        //print(modelUser)
+        //viewModel.sendCredentials(user: modelUser.email ?? "", pass: modelUser.pass ?? "")
+        viewModel.sendCredentials(user: user , pass: password )
         viewModel.refreshData = {[weak self]() in
             DispatchQueue.main.async { [self] in
                 self?.removeSpinner()

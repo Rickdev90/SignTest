@@ -20,13 +20,11 @@ public class ViewModelLogin {
     
     func sendCredentials(user: String, pass: String){
         guard let url = URL(string: "https://testandroid.macropay.com.mx") else {return}
-        
-        let user1 = "admin@macropay.mx"
-        let pass = "Admin1"
-        
+        //let user1 = "admin@macropay.mx"
+        //let pass = "Admin1"
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
-        let data : Data = "email=\(user1)&password=\(pass)&grant_type=password".data(using: .utf8)!
+        let data : Data = "email=\(user)&password=\(pass)&grant_type=password".data(using: .utf8)!
         request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
         request.setValue("lag", forHTTPHeaderField: "Accept-Language")
         request.httpBody = data
