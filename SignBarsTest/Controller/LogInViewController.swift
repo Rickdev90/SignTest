@@ -1,8 +1,8 @@
 //
-//  ViewController.swift
+//  LogInViewController.swift
 //  SignBarsTest
 //
-//  Created by Rick on 22/09/22.
+//  Created by Rick on 26/09/22.
 //
 
 import UIKit
@@ -10,7 +10,7 @@ import CryptoKit
 
 let defaults = UserDefaults.standard
 
-class ViewController: UIViewController {
+class LogInViewController: UIViewController {
     
     
     @IBOutlet weak var emailTxt: UITextField!
@@ -48,9 +48,6 @@ class ViewController: UIViewController {
                     print("tokeeen\(self?.viewModel.dataLoginResponse?.token)")
                     self?.JSONWT(str: self?.viewModel.dataLoginResponse?.token)
                     let vc = self?.storyboard?.instantiateViewController(identifier: "CodeBarViewController") as? CodeBarViewController
-                    //let objectSelected = self?.viewModel.dataLoginResponse?.token
-                    //vc?.objectReceived = objectSelected ?? ""
-                    //vc?.userReceived = user
                     self?.navigationController?.pushViewController(vc!, animated: true)
                     
                 }else{
@@ -58,9 +55,5 @@ class ViewController: UIViewController {
                 }
             }
         }
-        
     }
-    
 }
-
-
