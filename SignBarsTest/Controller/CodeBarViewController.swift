@@ -30,7 +30,7 @@ class CodeBarViewController: UIViewController  {
         generateCode(str: getSha(str: defaults.string(forKey: "firstPartToken") ?? ""))
         //generateCode(str: defaults.string(forKey: "firstPartToken") ?? "")
         //userLbl.text = userReceived
-        userLbl.text = defaults.string(forKey: "Usuario")
+        userLbl.text = ("Good afternoon \(String(describing: defaults.string(forKey: "Usuario") ?? ""))")
         tokenLbl.text = defaults.string(forKey: "firstPartToken")
     }
     

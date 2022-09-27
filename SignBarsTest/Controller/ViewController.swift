@@ -26,6 +26,10 @@ class ViewController: UIViewController {
     
     private func configureView(){
         LogInBtn.addTarget(self, action: #selector(logInAction), for: .touchUpInside)
+        LogInBtn.layer.cornerRadius = 5
+        LogInBtn.layer.borderWidth = 1
+        LogInBtn.layer.borderColor = UIColor.black.cgColor
+        self.hideKeyboardWhenTappedAround() 
     }
     
     @objc func logInAction() {
